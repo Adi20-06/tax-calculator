@@ -1,0 +1,79 @@
+:root {
+  --color-bg: #F6F7F5;
+  --color-surface: #FFFFFF;
+  --color-ink: #14203D;
+  --color-ink-soft: #5B6478;
+  --color-gold: #B8863B;
+  --color-gold-soft: #E8DCC4;
+  --color-success: #1F7A53;
+  --color-alert: #A23B2E;
+  --color-border: #D9D4C4;
+  --color-accent: #16A34A;
+  --color-accent-hover: #128A3E;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --radius: 4px;
+}
+
+[data-theme='dark'] {
+  --color-bg: #0A0F0C;
+  --color-surface: rgba(20, 38, 28, 0.5);
+  --color-ink: #F3F5F1;
+  --color-ink-soft: #93A395;
+  --color-gold: #E8B34F;
+  --color-gold-soft: #3A3323;
+  --color-success: #34D07C;
+  --color-alert: #E06A57;
+  --color-border: rgba(52, 208, 124, 0.18);
+  --color-accent: #22C55E;
+  --color-accent-hover: #1CA653;
+}
+
+
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+img, canvas, svg {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .page-title {
+    font-size: 24px;
+  }
+  .page-subtitle {
+    font-size: 13px;
+  }
+}
